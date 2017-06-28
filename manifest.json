@@ -1,0 +1,15 @@
+{
+    //required
+    "manifest_version" : 2,
+    "name" : "InstaGet",
+    "version" : "1.0.0b",
+
+    //recommend
+
+    "description" : "Down instagram image in one clicl",
+    "icons" : "",
+
+    "page_action" : {
+        
+    }
+}
