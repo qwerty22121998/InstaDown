@@ -7,7 +7,8 @@
     "permissions" : [
         "tabs",
         "contextMenus",
-        "downloads"
+        "downloads",
+        "background"
     ],
     /*
     "background" : {
@@ -17,7 +18,7 @@
 
     "content_scripts" : [{
         "matches" : ["https://www.instagram.com/*"],
-        "run_at" : "document_start",
+        "run_at" : "document_idle",
         "js" : ["main.js"]
     }
     ],
