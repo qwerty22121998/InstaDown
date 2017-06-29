@@ -1,10 +1,30 @@
+// parent : _22yr2 _e0mru
+// img : _jjzlb
+// over : _ovg3g
+$(document).on('change mouseover scroll', function (event) {
+    addButton();
+});
 
-var overlays = document.getElementsByClassName("_ovg3g");
-var number_of_overlays = overlays.length;
-if (number_of_overlays > 0) {
-    for (var i = 0; i < number_of_overlays; i++)
-        if (overlays.item(i) != null) overlays.item(i).remove();
-    console.log("Script Executed!");
-};
+$(document).on("click", ".action-button", function (event) {
+    
+    var this_img = this.parentElement.parentElement.getElementsByClassName("_jjzlb").item(0).firstChild;
 
+    var img_href = '"' + this_img.getAttribute("src") + '"';
+    console.log("InstaGet extension:: Download -> " + img_href);
+    if (img_href !== null) {
+        var dl = document.createElement('a');
+        dl.download = "";
+        dl.href = img_href;
+        dl.click();
+        dl.remove();
+    }
+})
+
+
+function addButton() {
+    $('._ovg3g:not(:has(>.action-button))').prepend('<a href="javascript:void(0)" class="action-button shadow animate green" title="Down this image">⤵</a>');
+
+}
+
+addButton();
 

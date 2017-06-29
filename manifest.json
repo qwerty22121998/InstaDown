@@ -5,8 +5,6 @@
     "version" : "1.0.0",
 
     "permissions" : [
-        "tabs",
-        "contextMenus",
         "downloads",
         "background"
     ],
@@ -18,8 +16,8 @@
 
     "content_scripts" : [{
         "matches" : ["https://www.instagram.com/*"],
-        "run_at" : "document_idle",
-        "js" : ["main.js"]
+        "js" : ["jquery.js","main.js"],
+        "css" : ["button.css"]
     }
     ],
 
