@@ -2,14 +2,34 @@
     //required
     "manifest_version" : 2,
     "name" : "InstaGet",
-    "version" : "1.0.0b",
+    "version" : "1.0.0",
 
-    //recommend
+    "permissions" : [
+        "tabs",
+        "contextMenus",
+        "downloads"
+    ],
+    /*
+    "background" : {
+        "scripts" : ["main.js"]
+    },
+    */
+
+    "content_scripts" : [{
+        "matches" : ["https://www.instagram.com/*"],
+        "run_at" : "document_start",
+        "js" : ["main.js"]
+    }
+    ],
 
     "description" : "Down instagram image in one clicl",
-    "icons" : "",
-
-    "page_action" : {
+    "icons" : {
+        "16" : "icons/instagram.png",
+        "128" : "icons/instagram.png"
         
+        },
+
+    "browser_action" : {
+        "default_title" : "Insta Get Plugin"        
     }
 }
