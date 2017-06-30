@@ -1,34 +1,34 @@
 {
-    //required
-    "manifest_version" : 2,
-    "name" : "InstaGet",
-    "version" : "1.0.0",
-
-    "permissions" : [
+    "manifest_version": 2,
+    "name": "InstaGet",
+    "version": "0.0.1",
+    "description": "Download any Instagram image/video in effortless way!",
+    "author": "Ho Vu - qwerty22121998@gmail.com",
+    "homepage_url": "https://www.facebook.com/khanhvu2212",
+    "icons": {
+        "16": "icons/icon16.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
         "downloads",
         "background"
     ],
-    /*
-    "background" : {
-        "scripts" : ["main.js"]
-    },
-    */
-
-    "content_scripts" : [{
-        "matches" : ["https://www.instagram.com/*"],
-        "run_at" : "document_idle",
-        "js" : ["jquery.js","main.js"],
-        "css" : ["button.css"]
-    }
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.instagram.com/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "scripts/jquery.js",
+                "scripts/main.js"
+            ],
+            "css": [
+                "styles/button.css"
+            ]
+        }
     ],
-
-    "description" : "Down instagram image in one clicl",
-    "icons" : {
-        "16" : "icons/icon16.png",
-        "128" : "icons/icon128.png"
-        },
-
-    "browser_action" : {
-        "default_title" : "Insta Get Plugin"        
+    "browser_action": {
+        "default_title": "InstaGet Plugin"
     }
 }
