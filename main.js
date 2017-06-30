@@ -35,10 +35,31 @@ $(document).on("click", ".instaget-video", function (event) {
     }
 })
 
+$(document).on('mouseenter', '._ovg3g', function () {
+        $(this).find(".action-button").show();
+}).on('mouseleave', '._ovg3g', function () {
+        $(this).find(".action-button").hide();
+});
+//_sppa1
+
+$(document).on('mouseover', '._ikcuh', function () {
+        $(this).find(".action-button").show();
+}).on('mouseout', '._ikcuh', function () {
+        $(this).find(".action-button").hide();
+});
+
+$(document).on('mouseover', '._8mlbc._vbtk2._t5r8b', function () {
+        $(this).find(".action-button").show();
+}).on('mouseout', '._8mlbc._vbtk2._t5r8b', function () {
+        $(this).find(".action-button").hide();
+});
+
+
 
 function addButton() {
-    $('._ovg3g:not(:has(>.instaget-image))').prepend('<a href="javascript:void(0)" class="action-button shadow animate green instaget-image" title="Down this image">⤵</a>');
-    $('._ikcuh:not(:has(>.instaget-video))').filter(':not(:has(>.instaget-image))').append('<a href="javascript:void(0)" class="action-button shadow animate red instaget-video" title="Down this video">⤵</a>');
+    
+    $('._ovg3g:not(:has(>.instaget-image))').prepend('<a href="javascript:void(0)" class="action-button shadow animate green instaget-image" title="Down this image" style="display: none;">⤵</a>');
+    $('._2tomm:not(:has(>.instaget-video))').append('<div class="instaget-video"></div>').parent().parent().parent().parent().parent().parent().append('<a href="javascript:void(0)" class="action-button shadow animate red instaget-video" title="Down this video"  style="display: none;">⤵</a>');
 }
 
 

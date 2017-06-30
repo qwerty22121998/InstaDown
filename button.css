@@ -7,20 +7,13 @@
 .action-button
 {
 	position: absolute;
-  padding-top: 20px;
-	width: 50px;
-  height: 30px;
+  padding-top: 10px;
+	width: 40px;
+  height: 20px;
   z-index: 999;
-	margin-top: 20px;
-  /*
-
-  
-	//border-radius: 10px;
-  
-  */
+	margin-top: 30px;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-
   float: left;
 	font-size: 25px;
 	color: #FFF;
@@ -42,8 +35,6 @@
 	text-shadow: 0px -2px #BD3E31;
   text-align: center;  
 }
-
-
 
 .action-button:active
 {
