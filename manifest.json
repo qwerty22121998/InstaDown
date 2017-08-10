@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "InstaGet",
-    "version": "0.0.1",
-    "description": "Download any Instagram image/video in effortless way!",
+    "version": "0.1.0",
+    "description": "Download any Instagram image/video in effortless way! - Updated 2017/08/10",
     "author": "Ho Vu - qwerty22121998@gmail.com",
     "homepage_url": "https://www.facebook.com/khanhvu2212",
     "icons": {
