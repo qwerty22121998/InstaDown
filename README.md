@@ -1,2 +1,3 @@
 # InstaDown
-Download image from instagram using chrome extension
+Download image from instagram using chrome extension<br>
+Outdated
