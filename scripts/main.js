@@ -50,5 +50,4 @@ function addButton() {
     $('._l6uaz:not(:has(>.instaget-video))').append('<div class="instaget-video"></div>').parent().parent().parent().parent().parent().parent().append('<a href="javascript:void(0)" class="action-button shadow animate red instaget-video" title="Down this video"  style="display: none;">⤵</a>');
 }
 
-
-
+// long dz
