@@ -2,9 +2,8 @@ const ARTICLE_CLASS = "._8Rm4L.M9sTE.L_LMM.SgTZ1"
 const IMG_CLASS = ".KL4Bh"
 const VID_CLASS = "._5wCQW"
 const BAR_CLASS = ".ltpMr.Slqrh"
-let getArticleList = () => {
-    return $(ARTICLE_CLASS)
-}
+
+
 let getMediaUrl = dom => {
     let img = $(dom).find(IMG_CLASS)
     if (img.length > 0)
