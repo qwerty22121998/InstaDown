@@ -1,6 +1,7 @@
 const ARTICLE_CLASS = "._8Rm4L.M9sTE.L_LMM.SgTZ1"
 const IMG_CLASS = ".KL4Bh"
 const VID_CLASS = "._5wCQW"
+const BAR_CLASS = ".ltpMr.Slqrh"
 let getArticleList = () => {
     return $(ARTICLE_CLASS)
 }
@@ -21,15 +22,15 @@ let cvtFromTextToElement = text => {
 
 let newButton = url => {
     console.log(url)
-    let button = cvtFromTextToElement('<button class="oF4XW dCJp8 isg"><span class="glyphsSpriteDirect__outline__24__grey_9" aria-label="Download this image/videos"></span></button>')
-    button.addEventListener("click", () => {
+    let button = cvtFromTextToElement('<button class="oF4XW dCJp8 isg"><span class="glyphsSpriteDirect__outline__24__grey_9" aria-label="Download this image/video"></span></button>')
+    $(button).click(() => {
         chrome.runtime.sendMessage(url)
     })
     return button
 }
 
 let getButtonBar = dom => {
-    return dom.getElementsByClassName("eo2As")[0].getElementsByClassName("ltpMr Slqrh")[0]
+    return $(dom).find(BAR_CLASS)[0]
 }
 
 
