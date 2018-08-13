@@ -1,15 +1,15 @@
-const ARTICLE_CLASS = "._8Rm4L.M9sTE.L_LMM.SgTZ1"
-const IMG_CLASS = ".KL4Bh"
-const VID_CLASS = "._5wCQW"
-const BAR_CLASS = ".ltpMr.Slqrh"
-const LEFT_MOVE = ".coreSpriteLeftChevron"
-const RIGHT_MOVE = ".coreSpriteRightChevron"
+const CONTAINER_ARTICLE = ".M9sTE.L_LMM"
+const CONTAINER_IMG = ".KL4Bh"
+const CONTAINER_VID = "._5wCQW"
+const CONTAINER_CONTROLER = ".ltpMr.Slqrh"
+const CONTAINER_LEFTBTN = ".coreSpriteLeftChevron"
+const CONTAINER_RIGHTBTN = ".coreSpriteRightChevron"
 
 let getMediaUrl = dom => {
-    let img = $(dom).find(IMG_CLASS)
+    let img = $(dom).find(CONTAINER_IMG)
     if (img.length > 0)
         return img[0].firstChild.getAttribute("src")
-    let vid = $(dom).find(VID_CLASS)
+    let vid = $(dom).find(CONTAINER_VID)
     if (vid.length > 0)
         return vid[0].firstChild.getAttribute("src")
     return null
@@ -34,11 +34,11 @@ let newButton = dom => {
 }
 
 let getButtonBar = dom => {
-    return $(dom).find(BAR_CLASS)[0]
+    return $(dom).find(CONTAINER_CONTROLER)[0]
 }
 
 let getMoveButton = dom => {
-    return $.merge($(dom).find(LEFT_MOVE), $(dom).find(RIGHT_MOVE))
+    return $.merge($(dom).find(CONTAINER_LEFTBTN), $(dom).find(CONTAINER_RIGHTBTN))
 }
 
 
@@ -47,7 +47,7 @@ let addButtonToBar = (list, button) => {
 }
 
 let addDownLoadButton = () => {
-    $(ARTICLE_CLASS + ":not(:has(.isg))").each((index, element) => {
+    $(CONTAINER_ARTICLE + ":not(:has(.isg))").each((index, element) => {
         let url = getMediaUrl(element)
         if (url != null) {
             addButtonToBar(getButtonBar(element), newButton(element))
