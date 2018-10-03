@@ -5,7 +5,7 @@ const CONTAINER_CONTROLER = ".ltpMr.Slqrh"
 const CONTAINER_LEFTBTN = ".coreSpriteLeftChevron"
 const CONTAINER_RIGHTBTN = ".coreSpriteRightChevron"
 
-let getMediaUrl = dom => {
+const getMediaUrl = dom => {
     let img = $(dom).find(CONTAINER_IMG)
     if (img.length > 0)
         return img[0].firstChild.getAttribute("src")
@@ -15,17 +15,17 @@ let getMediaUrl = dom => {
     return null
 }
 
-let cvtFromTextToElement = text => {
+const cvtFromTextToElement = text => {
     let doc = new DOMParser().parseFromString(text, 'text/html')
     return doc.body.firstChild
 }
 
-let sendDownMsg = dom => {
+const sendDownMsg = dom => {
     url = getMediaUrl(dom)
     chrome.runtime.sendMessage(url)
 }
 
-let newButton = dom => {
+const newButton = dom => {
     let button = cvtFromTextToElement('<button class="oF4XW dCJp8 isg"><span class="glyphsSpriteDirect__outline__24__grey_9" aria-label="Download this image/video"></span></button>')
     $(button).click(() => {
         sendDownMsg(dom)
@@ -33,20 +33,20 @@ let newButton = dom => {
     return button
 }
 
-let getButtonBar = dom => {
+const getButtonBar = dom => {
     return $(dom).find(CONTAINER_CONTROLER)[0]
 }
 
-let getMoveButton = dom => {
+const getMoveButton = dom => {
     return $.merge($(dom).find(CONTAINER_LEFTBTN), $(dom).find(CONTAINER_RIGHTBTN))
 }
 
 
-let addButtonToBar = (list, button) => {
+const addButtonToBar = (list, button) => {
     list.lastChild.before(button)
 }
 
-let addDownLoadButton = () => {
+const addDownLoadButton = () => {
     $(CONTAINER_ARTICLE + ":not(:has(.isg))").each((index, element) => {
         let url = getMediaUrl(element)
         if (url != null) {
