@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "InstaGet",
-    "version": "2.0.0",
+    "name": "Instagram Downloader",
+    "version": "3.0.0",
     "description": "Download any Instagram image/video in effortless way!",
     "author": "Ho Vu - qwerty22121998@gmail.com",
     "homepage_url": "https://www.facebook.com/khanhvu2212",
@@ -22,12 +22,9 @@
             "https://www.instagram.com/*"
         ],
         "run_at": "document_end",
-        "js": [
-            "scripts/jquery.js",
-            "scripts/main.js"
-        ]
+        "js": ["scripts/main.js"]
     }],
     "browser_action": {
-        "default_title": "InstaGet Plugin"
+        "default_title": "InstaGet"
     }
 }
